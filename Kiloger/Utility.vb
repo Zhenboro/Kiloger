@@ -81,6 +81,10 @@ Module StartUp
                     Main.SaveRecord()
                     Main.StopRecording()
 
+                ElseIf parameter.ToLower Like "*/processkeys*" Then
+                    'leer archivo y procesar teclas
+                    Main.StartKeyProcessor(parameter.Split("'")(1))
+
                 ElseIf parameter.ToLower Like "*/stop*" Then
                     'cierra
                     End
